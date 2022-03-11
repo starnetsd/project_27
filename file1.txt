@@ -1,0 +1,10 @@
+this file is for test env
+v.3.0
+
+<body>
+	<vr> access=101 compress=N utility=0 </vr>
+	<cl> random=tz,tr,tt class=testenv </cl>
+</body>
+
+exit
+
