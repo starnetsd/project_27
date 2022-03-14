@@ -1,0 +1,92 @@
+Первое ДЗ 	
+Linux terminal (GitBash) commands	
+	
+1) Посмотреть где я	pwd
+2) Создать папку	mkdir foldername
+2.1) Удалить пустую папку	rmdir foldername     (rm -d foldername)
+2.2) Удалить папку со вложенными файлами	rm -r foldername
+2.3) Удалить все файлы и папки со вложенными файлами   DANGEROUS COMMAND	rm -r *                                                              DANGEROUS COMMAND
+3) Зайти в папку	cd foldername
+4) Создать 3 папки	mkdir foldername1 foldername2 foldername3
+5) Зайти в любоую папку	cd pathToFolder
+6) Создать 5 файлов (3 txt, 2 json)	touch file1.txt file2.txt file3.txt file1.json file2.json
+7) Создать 3 папки	mkdir foldername1 foldername2 foldername3
+8) Вывести список содержимого папки	ls
+8.1) Вывести список содержимого папки с отображением скрытых файлов	ls -a
+8.2) Вывести список содержимого папки с отображением дополнительных параметров	ls -l
+8.3) Вывести список содержимого папки с отображением дополнительных параметров и скрытых файлов	ls -la
+8.4) Вывести список содержимого папки и содержимого всех вложенных папок	ls -R
+8.5) Вывести список содержимого папки и всех вложенных папок с отоброжением доп. Парамнтров	ls -R -la    (Rla)
+8.6) Вывести список содержимого папки с отображением дополнительных параметров и сортировкой по времени	ls -lt
+	ls -ltr
+	ls -l *
+9) + Открыть любой txt файл	vim filename
+10) + написать туда что-нибудь, любой текст.	I (--Insert--) write text
+11) + сохранить и выйти.	:wq
+11.1)Вывести содержимое любого файла	cat filename
+12) Выйти из папки на уровень выше	cd ..
+12.1) Вернуться в предыдущую папку	cd -
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.	mv path_to_files/{filename1,filename2} path_to_move/
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.	cp path_to_files/{filename1,filename2} path_to_copy/
+14.1) скопировать любые файлы из любой другой папки в текущую папку	cp ~/foldername/filename .                     (~ = home directory /pathToFile  . =  current directory)
+15) Найти файл по имени (регистрозависимы)	find -name filena*
+15.1) Найти файл по имени в конкретной директории (регистрозависимы)	find foldername -name filena*
+15.2) Найти файл по имени без учета регистра (не регистрозависимы)	find -iname filena*
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.	grep [type your text] filename
+16.1) Найти файл по имени (рекурсивно)	grep -r filename *
+16.2) Найти файл по имени в конкретной директории (рекурсивно)	grep -r filename foldername
+16.3) Найти файл по имени в конкретной директории и субдиректории	grep filename foldername/{foldername1, foldername2}/*
+16.4) Найти "файл+содержимое строки" по содержимому (рекурсивно)	grep -r text_to_find*
+16.5) Найти "файл+содержимое строки" по содержимому без учета регистра (рекурсивно) (не регистрозависимы)	grep -r -i text_to_find*
+16.6) Вывести имя файла по содержимому	grep -l -r text_to_find*
+16.7) Вывести имя файла по содержимому без учета регистра (рекурсивно) (не регистрозависимы)	grep -l -r -i text_to_find*
+17.0) вывести содержимое файла	cat filename
+17.1) создать файл и вписать в нем данные и выйти из режима редактирования	cat > filename [type text] ctrl + c
+17.2) вывести содержимое двух файлов	cat filename1 filename2
+17.3) вывести содержимое файла с нумерацией всех строк (пустых и непустых)	cat -n filename
+17.4) вывести содержимое файла с нумерацией непустых строк	cat -b filename
+17.5) вывести содержимое файла с удалением пустых строк	cat -s filename
+17.6) добавить новые строки в конце существующего фыйла (редактирование) 	cat >> filename [type text] ctrl + c
+17.7) вывести содержимое файла в новом окне	cat filename | less          (q - to exit)
+17.8) содержимое одного файла добавить в конце содержимого другого файла (склеивание двуж файлов)	cat filename1 >> filename2             (filename1 added to filename2)
+17.9) содержимое одного файла переписывать в другой файл	cat filename1 > filename2             (filename2 will be deleted and populated with filename1)
+вывести содержимое файла в сортированном виде (сортировать)	cat filename | sort
+содержимое двух файлов склеить и скопировать в отдельный файл 	cat filename1 filename2 > filename3
+содержимое двух файлов склеить, отсортировать и скопировать в отдельный файл 	cat filename1 filename2 | sort > filename3
+	
+18.1) вывести несколько первых строк из текстового файла	head filename               (displays first 10 lines of file)
+18.2) вывести первые 3 строки из текстового файла	head -n3 filename               (displays first 3 lines of file)
+18.3) вывести несколько последних строк из текстового файла	tail filename               (displays last 10 lines of file)
+18.3) вывести последние 3 строки из текстового файла	tail -n3 filename               (displays last 3 lines of file)
+18.4) просмотреть содержимое файла в реальном времени	tail -f filename
+18.5.) вывести строки с 10 по 15 из текстового файла	head -15 filename | tail -6
+	
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.	less filename   (Spacebar = one line down. Enter = one page down. q = quit)
+20) вывести дату и время	
+21) удалить папку или файл	rm foldername    (filename)
+22) удалить папку со всеми вложенными папками и файлами	rm -r foldername
+23) на уровень выше	../
+24) на 2 уровня выше	../..
+25) показать историю комманд написаных в терминале	history
+26) записать в файл историю комманд написаных в терминале	history > filename
+27) вывести текст на экран (в терминале)	echo 'type_your_text'
+28) записать текст в файле	echo 'type_your_text' > filename
+28.1) записать текст в существующем файле	echo 'type_your_text' >> filename
+29) вывести количество строк в файле	wc -l filename
+29.1) вывести количество символов в файле	wc -c filename
+30) пролистать содержимое большого файла	less filename   (Spacebar = one line down. Enter = one page down. q = quit)
+31) пролистать содержимое большого файла и показать % визуализации	more filename   (Spacebar = one line down. Enter = one page down. q = quit)
+32) переименовать файл	mv filename newfilename
+33) изменить доступ к файлу (symbolic)	chmod ugo=rwx filename
+34) убрать доступ к файлу (symbolic)	chmod go-w filename
+35) убрать доступ и добавить доступ одновременно (symbolic)	chmod ugo+x,g-w filename     (chmod u=rwx,g=x,o=x)
+36) изменить доступ к файлу (absolute)	chmod 777 filename       (ugo=rwx)
+37) показать информацию о типе файла	file filename
+38) выполнить задачи, требующие прав вдминистратора или root    (SuperUser Do)	sudo
+39) сравнивать содержимое двух файлов построчно	diff filename1 filename2
+	
+	
+ignore case	grep -I error
+	
+Показать информацию о комманде в Linux	man command_name
+	
