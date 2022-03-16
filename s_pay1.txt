@@ -1,0 +1,3 @@
+samsung pay feature
+//type your code here
+method samsung pay
