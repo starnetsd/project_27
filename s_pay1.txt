@@ -1,9 +1,0 @@
-samsung pay feature
-//type your code here
-method samsung pay
-
-
-
-
-this file was changed
-aaa111
