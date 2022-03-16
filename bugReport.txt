@@ -1,0 +1,15 @@
+BugID: 4
+Title: User can't Log In with valid credentials
+Environment: Windows 10 Pro 64-bit, Version 21H1, Build 19043.1586, Google Chrome Version 99.0.4844.51
+Description: When trying to log in with valid credentials an error group 500 is displayed"
+Steps to reproduce:
+  1: Navigate to https://ksendzov.com/login
+  2: type 'VadimKsendzov' in the 'username' field
+  3: type 'poplomot' in the 'password' field
+  4: click on 'Login' button
+Actual_Result: Error message '418 I'm a teapot' message is displayed
+Expected_Result: User logged in. Home page is displayed
+Priority: Highest
+Attachements: Screenshot1.png, Screenshot2.png, LogFile.txt
+Assigned_to: developer1
+
